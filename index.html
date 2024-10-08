@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - videomaker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: url('images/capa.png') no-repeat center center/cover;
+      color: #fff;
+      padding: 60px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color: rgb(187, 66, 211); /* Cor de fundo do menu */
+    }
+
+    .menu > li {
+      position: relative; /* Para que o submenu seja posicionado em relação ao item do menu */
+      display: inline-block; /* Exibir os itens do menu lado a lado */
+    }
+
+    .menu > li > a {
+      display: block;
+      padding: 14px 20px;
+      color: white; /* Cor do texto do menu */
+      text-decoration: none;
+    }
+
+    .menu > li > a:hover {
+      background-color: #802478; /* Cor de fundo ao passar o mouse */
+    }
+
+    .submenu {
+      display: none; /* Inicialmente oculta */
+      position: absolute; /* Para posicionar o submenu */
+      top: -100%; /* Colocar o submenu acima do item do menu */
+      left: 0;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color: rgb(156, 39, 167); /* Cor de fundo do submenu */
+      z-index: 1; /* Para garantir que o submenu fique acima de outros elementos */
+    }
+
+    .submenu li a {
+      padding: 10px 15px;
+      color: white; /* Cor do texto do submenu */
+      text-decoration: none;
+      display: block;
+    }
+
+    .submenu li a:hover {
+      background-color: #9439a0; /* Cor de fundo ao passar o mouse no submenu */
+    }
+
+    .menu > li:hover .submenu {
+      display: block; /* Exibir o submenu ao passar o mouse sobre o item do menu */
+    }
+
+    .hero {
+      text-align: center;
+      padding: 180px 0;
+    }
+
+    .about {
+      padding: 60px 0;
+      background-color: #fff;
+    }
+
+    .about-content {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .about-img img {
+      border-radius: 10px;
+    }
+
+    .about-text h2 {
+      font-size: 36px;
+    }
+
+    .about-text p {
+      margin-top: 10px;
+    }
+
+    .portfolio {
+      background-color: #f7f7f7;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .portfolio h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .load-more {
+      background-color: #ffcc00;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    /* Netflix-style profile menu */
+    .profile-menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .profile-menu .profile {
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .profile img {
+      border-radius: 10%;
+      width: 110px;
+      height: 110px;
+    }
+
+    .profile p {
+      margin-top: 10px;
+      color: #333;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgb(151, 54, 189);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul class="menu">
+          <li><a href="#" class="active">Home</a></li>
+          <li>
+              <a href="#">About</a>
+              <ul class="submenu">
+                  <li><a href="#">História</a></li>
+                  <li><a href="#">Missão</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Works</a>
+              <ul class="submenu">
+                  <li><a href="#">Vídeos</a></li>
+                  <li><a href="#">Fotos</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+      </nav>
+    </div>
+    <div class="hero">
+      <div class="hero-content">
+        <!-- Hero content can go here -->
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-img">
+          <img src="images/eu.png" alt="Profile Image">
+        </div>
+        <div class="about-text">
+          <h2>Olá,</h2>
+          <p>Meu nome é Leonardo de Oliveira, e este é o meu portfólio pessoal. Sou videomaker e editor de vídeos, aqui você encontrará uma seleção do meu trabalho. Explore meu portfólio e vamos conversar sobre como posso ajudar a dar vida ao seu próximo projeto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container">
+      <h2>Meus Trabalhos</h2>
+      
+      <!-- Netflix-style profile menu -->
+      <div class="profile-menu">
+        <div class="profile" onclick="window.location.href='video.html'">
+          <img src="images/video.png" alt="Perfil 1">
+          <p>videos</p>
+        </div>
+        <div class="profile" onclick="window.location.href='foto.html'">
+          <img src="images/foto.png" alt="Perfil 2">
+          <p>Fotos</p>
+        </div>
+        <div class="profile" onclick="window.location.href='feedback.html'">
+          <img src="images/feedback.png" alt="Perfil 3">
+          <p>feedback</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Leonardo de Oliveira - Todos os Direitos Reservados</p>
+    </div>
+  </footer>
+</body>
+</html>
